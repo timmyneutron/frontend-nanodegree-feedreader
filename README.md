@@ -2,7 +2,7 @@
 # Project #5: Feed Reader
 
 ### Introduction
-This is a project for Udacity's Front-End Web Developer Nanodegree. In it, I was given an already-completed app that displays titles and snippets from several RSS feeds, and my task was to write test suites for this app using Jasmine.
+This is a project for Udacity's Front-End Web Developer Nanodegree. In it, I was given an already-completed app that displays titles of articles from several RSS feeds, and my task was to write test suites for this app using Jasmine.
 ### Concepts
 Concepts explored in this project include:
 

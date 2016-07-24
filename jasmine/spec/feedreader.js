@@ -104,7 +104,7 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
-
+         var lastEntry = allFeeds[allFeeds.length - 1];
          allFeeds.push({
             name: 'The Art Of Manliness',
             url: 'http://feeds.feedburner.com/TheArtOfManliness'
@@ -124,4 +124,3 @@ $(function() {
     });
 
 }());
-s

@@ -95,7 +95,6 @@ $(function() {
             expect(document.getElementsByClassName("entry").length > 0).toBe(true);
             done();
          });
-
     });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
@@ -105,7 +104,7 @@ $(function() {
      Remember, loadFeed() is asynchronous. */
          describe('New Feed Selection', function() {
 
-         var feedIndex = 3;
+         var feedIndex = 1;
          beforeEach(function(done) {
             loadFeed(feedIndex, function() {
                 done();
@@ -116,7 +115,6 @@ $(function() {
             expect($(".header-title").text() === allFeeds[feedIndex].name).toBe(true);
             done();
          });
-
     });
 
 }());

@@ -91,33 +91,29 @@ $(function() {
             });
          });
 
-         it('at least one .entry element in the .feed container after ajax call', function(done) {
-            expect($('.entry')).toBeDefined();
+         it('at least one .entry element', function(done) {
+            expect(document.getElementsByClassName("entry").length > 0).toBe(true);
             done();
          });
 
     });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
-    describe('New Feed Selection', function() {
-        /* TODO: Write a test that ensures when a new feed is loaded
-         * by the loadFeed function that the content actually changes.
-         * Remember, loadFeed() is asynchronous.
-         */
-         var lastEntry = allFeeds[allFeeds.length - 1];
-         allFeeds.push({
-            name: 'The Art Of Manliness',
-            url: 'http://feeds.feedburner.com/TheArtOfManliness'
-         });
 
+    /* TODO: Write a test that ensures when a new feed is loaded
+     by the loadFeed function that the content actually changes.
+     Remember, loadFeed() is asynchronous. */
+         describe('New Feed Selection', function() {
+
+         var feedIndex = 3;
          beforeEach(function(done) {
-            loadFeed(allFeeds.length - 1, function() {
+            loadFeed(feedIndex, function() {
                 done();
-            })
+            });
          });
 
-         it('new feed is loaded', function(done) {
-            expect(lastEntry === allFeeds[allFeeds.length - 1]).toBe(false);
+         it('content changes', function(done) {
+            expect($(".header-title").text() === allFeeds[feedIndex].name).toBe(true);
             done();
          });
 

@@ -23,6 +23,7 @@ To get started, follow these steps:
 
 ### Tests
 Jasmine tests were written to show that:
+
 1. The list of feeds is defined
 2. All feeds have URLs associated with them
 3. All feeds have titles

@@ -35,6 +35,7 @@ $(function() {
         it('have urls', function() {
             for (var i = 0; i < allFeeds.length; i++) {
                 expect(allFeeds[i].url).toBeDefined();
+                expect(allFeeds[i].url.length).toBeGreaterThan(0);
             }
         });
 
@@ -46,6 +47,7 @@ $(function() {
         it('have names', function() {
             for (var i = 0; i < allFeeds.length; i++) {
                 expect(allFeeds[i].name).toBeDefined();
+                expect(allFeeds[i].name.length).toBeGreaterThan(0);
             }
         });
     });
@@ -70,9 +72,9 @@ $(function() {
           */
 
       it("clicking the hamburger button toggles the menu on/off", function() {
-        $('.menu-icon-link').trigger('click');
+        $('.menu-icon-link').click();
         expect($('body').hasClass('menu-hidden')).toBe(false);
-        $('.menu-icon-link').trigger('click');
+        $('.menu-icon-link').click();
         expect($('body').hasClass('menu-hidden')).toBe(true);
       });
     });
@@ -86,14 +88,11 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
          beforeEach(function(done) {
-            loadFeed(0, function() {
-                done();
-            });
+            loadFeed(0, done);
          });
 
-         it('at least one .entry element', function(done) {
-            expect(document.getElementsByClassName("entry").length > 0).toBe(true);
-            done();
+         it('at least one .entry element', function() {
+            expect($(".feed .entry").length).toBeGreaterThan(0);
          });
     });
 
@@ -104,17 +103,19 @@ $(function() {
      Remember, loadFeed() is asynchronous. */
          describe('New Feed Selection', function() {
 
-         var feedIndex = 1;
+         var firstFeed, secondFeed;
          beforeEach(function(done) {
-            loadFeed(feedIndex, function() {
-                done();
+            loadFeed(0, function() {
+                firstFeed = $(".feed .entry").text();
+                loadFeed(1, function() {
+                    secondFeed = $(".feed .entry").text();
+                    done();
+                });
             });
          });
 
-         it('content changes', function(done) {
-            expect($(".header-title").text() === allFeeds[feedIndex].name).toBe(true);
-            done();
+         it('content changes', function() {
+            expect(firstFeed).not.toBe(secondFeed);
          });
     });
-
 }());

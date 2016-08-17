@@ -7,7 +7,7 @@ This is a project for Udacity's Front-End Web Developer Nanodegree. In it, I was
 Concepts explored in this project:
 
   - test-driven development
-  - constructing test suites using Jasmine
+  - constructing test suites using [Jasmine](http://jasmine.github.io/)
 
 Relevant Classes:
   - [Javascript Testing](https://www.udacity.com/course/javascript-testing--ud549)

@@ -22,7 +22,7 @@ To get started:
 ### Instructions
 1. The app will load with a list of titles of articles from one of its RSS feeds. Click on a title to view that article.
 2. To change RSS feeds, click the hamburger icon in the top left corner to open the sidebar menu, and select a new feed.
-3. Jasmine should indicate at the bottom that the app is working as it should
+3. Jasmine should indicate at the bottom that all tests have been passed and the app is working as it should
 
 ### Tests
 Jasmine tests were written to show that:

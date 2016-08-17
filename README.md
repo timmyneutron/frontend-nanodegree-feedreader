@@ -3,11 +3,14 @@
 
 ### Introduction
 This is a project for Udacity's Front-End Web Developer Nanodegree. In it, I was given an already-completed app that displays titles of articles from several RSS feeds, and my task was to write test suites for this app using Jasmine.
-### Concepts
-Concepts explored in this project include:
+### Concepts and Classes
+Concepts explored in this project:
 
   - test-driven development
   - constructing test suites using Jasmine
+
+Relevant Classes:
+  - [Javascript Testing](https://www.udacity.com/course/javascript-testing--ud549)
 
 ### Getting Started
 To get started, follow these steps:

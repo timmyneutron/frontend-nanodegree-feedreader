@@ -13,7 +13,7 @@ Relevant Classes:
   - [Javascript Testing](https://www.udacity.com/course/javascript-testing--ud549)
 
 ### Getting Started
-To get started, follow these steps:
+To get started:
 
 1. Download/clone the repository
 2. To run the app, open ```index.html``` in a web browser
